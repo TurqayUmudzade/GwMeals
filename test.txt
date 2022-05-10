@@ -1,0 +1,10 @@
+sequelize model:generate --name Menu --attributes mealName:string,price:float,is_available:boolean
+sequelize model:generate --name User --attributes username:string,email:string,phone_number:string,password:string
+
+
+
+sequelize model:generate --name Adress --attributes street:string
+
+sequelize model:generate --name tset --attributes street:string
+
+sequelize model:generate --name OrderType --attributes name:string
