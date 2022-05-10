@@ -3,7 +3,6 @@ const router = express.Router()
 const { Address } = require('../../models')
 
 router.get('/', async (req, res, next) => {
-
     try {
         res.json(await Address.findAll());
     } catch (err) {

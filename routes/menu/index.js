@@ -3,13 +3,8 @@ const router = express.Router()
 const { Menu } = require('../../models')
 
 router.get('/', async (req, res, next) => {
-
-    try {
-        res.json(await Menu.findAll());
-    } catch (err) {
-        console.error(`Error while getting menu`, err.message);
-        next(err);
-    }
+    const menus = await Menu.findAll()
+    res.json(menus);
 
 })
 
