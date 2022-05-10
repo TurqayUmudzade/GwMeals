@@ -17,8 +17,8 @@ router.post('/', async (req, res, next) => {
 
     try {
         const { street, userId } = req.body
-        let adress = await Adress.create({ street, userId })
-        return res.json(adress);
+        let address = await Address.create({ street, userId })
+        return res.json(address);
 
     } catch (err) {
         console.error(`Error while getting adress`, err.message);
