@@ -1,10 +1,27 @@
 const express = require("express")
 const router = express.Router()
-const { Order, MenuOrder } = require("../../models")
+const { Order, MenuOrder, Payment, Address } = require("../../models")
 
 router.get("/", async (req, res, next) => {
   try {
     return res.json(await Order.findAll())
+  } catch (err) {
+    console.error(`Error while getting order`, err.message)
+    next(err)
+  }
+})
+
+router.get("/me", async (req, res, next) => {
+  try {
+    return res.json(
+      await Order.findAll({
+        where: {
+          user_id: 1,
+        },
+        include: Payment,
+        include: Address,
+      })
+    )
   } catch (err) {
     console.error(`Error while getting order`, err.message)
     next(err)
@@ -19,10 +36,8 @@ router.post("/", async (req, res, next) => {
       payment_id,
       address_id,
       ordertype_id,
-      items
+      items,
     } = req.body
-
-
 
     let order = await Order.create({
       order_status,
@@ -37,7 +52,7 @@ router.post("/", async (req, res, next) => {
       let menuOrder = await MenuOrder.create({
         order_id: order.id,
         menu_id: item.menu_id,
-        quantity: item.quantity
+        quantity: item.quantity,
       })
       out.push(menuOrder)
     }
