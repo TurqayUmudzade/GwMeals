@@ -8,7 +8,7 @@ const payment = require("./payment")
 const router = express.Router()
 
 router.use("/users", user)
-router.use("/address", address)
+router.use("/addresses", address)
 router.use("/menus", menu)
 router.use("/ordertypes", ordertype)
 router.use("/payments", payment)
