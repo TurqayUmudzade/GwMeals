@@ -8,6 +8,7 @@ module.exports = {
         mealName: "Dolma",
         price: 9.99,
         is_available: true,
+        image: "https://www.unicornsinthekitchen.com/wp-content/uploads/2022/01/Turkish-dolma-4.1200px.jpg",
         updatedAt: new Date(),
         createdAt: new Date()
       },
@@ -16,6 +17,7 @@ module.exports = {
         mealName: "Doner",
         price: 2.99,
         is_available: true,
+        image: "https://www.unicornsinthekitchen.com/wp-content/uploads/2022/01/Turkish-dolma-4.1200px.jpg",
         updatedAt: new Date(),
         createdAt: new Date()
       },
@@ -24,6 +26,7 @@ module.exports = {
         mealName: "Burger",
         price: 5.99,
         is_available: true,
+        image: "https://www.unicornsinthekitchen.com/wp-content/uploads/2022/01/Turkish-dolma-4.1200px.jpg",
         updatedAt: new Date(),
         createdAt: new Date()
       },
@@ -32,6 +35,7 @@ module.exports = {
         mealName: "Kebab",
         price: 29.99,
         is_available: true,
+        image: "https://www.unicornsinthekitchen.com/wp-content/uploads/2022/01/Turkish-dolma-4.1200px.jpg",
         updatedAt: new Date(),
         createdAt: new Date()
       },
@@ -40,6 +44,7 @@ module.exports = {
         mealName: "Steak",
         price: 39.99,
         is_available: true,
+        image: "https://www.unicornsinthekitchen.com/wp-content/uploads/2022/01/Turkish-dolma-4.1200px.jpg",
         updatedAt: new Date(),
         createdAt: new Date()
       }
