@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(OrderType, { foreignKey: "ordertype_id" })
       this.belongsTo(Payment, { foreignKey: "payment_id" })
       this.belongsToMany(Menu, { through: MenuOrder, foreignKey: "menu_id" })
-      this.hasMany(MenuOrder, { foreignKey: "order_id" })
+      this.hasMany(MenuOrder)
     }
   }
   Order.init(

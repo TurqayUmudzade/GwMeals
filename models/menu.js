@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ MenuOrder, Order }) {
       this.belongsToMany(Order, { through: MenuOrder, foreignKey: "order_id" })
-      this.hasMany(MenuOrder, { foreignKey: "menu_id" })
+      this.hasMany(MenuOrder)
     }
   }
   Menu.init(

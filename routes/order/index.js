@@ -21,11 +21,10 @@ router.get("/me", async (req, res, next) => {
         include: [
           Payment,
           Address,
-          Menu,
-          // {
-          //   model: Menu,
-          //   through: { attributes: ["quantity"] },
-          // },
+          {
+            model: Menu,
+            through: { attributes: ["quantity"] },
+          },
         ],
       })
     )
