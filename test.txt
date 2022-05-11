@@ -7,4 +7,7 @@ sequelize model:generate --name Adress --attributes street:string
 
 sequelize model:generate --name tset --attributes street:string
 
-sequelize model:generate --name Orders --attributes total_amount:float,order_status:string,
+sequelize model:generate --name Orders --attributes total_amount:float,order_status:string
+
+
+sequelize model:generate --name MenuOrder --attributes quantity:int
