@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const { Order, MenuOrder, Payment, Address } = require("../../models")
+const { Order, Menu, MenuOrder, Payment, Address } = require("../../models")
 
 router.get("/", async (req, res, next) => {
   try {
@@ -18,8 +18,15 @@ router.get("/me", async (req, res, next) => {
         where: {
           user_id: 1,
         },
-        include: Payment,
-        include: Address,
+        include: [
+          Payment,
+          Address,
+          Menu,
+          // {
+          //   model: Menu,
+          //   through: { attributes: ["quantity"] },
+          // },
+        ],
       })
     )
   } catch (err) {
